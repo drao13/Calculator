@@ -1,0 +1,30 @@
+import random
+
+number = random.randint(90, 100)
+tries = 0
+win = False
+
+
+name = input("Hello, What is your name?")
+
+print("Hello" + " " + name + "." )
+
+answer = input("Would you like to play a game? [y/n] ")
+if answer.lower() == "n":
+       print("oh..okay, sure bye bye!")
+       exit()
+if answer.lower() == "y":
+        print("Great, then let's get started")
+        print("I'm thinking of a number between 90 & 100, do you think you can guess it right?")
+while not win: # while the win is not true, run the while loop. We set win to false at the start therefore this will always run
+    guess = int(input("Have a guess: "))
+    tries = tries + 1
+    if guess == number:
+        win = True    # set win to true when the user guesses correctly.
+    elif guess < number:
+        print("Guess Higher,")
+    elif guess > number:
+        print("Guess Lower,")
+# if win is true then output message
+print("Congrats, you guessed correctly. The number was indeed {}".format(number))
+print("It had taken you {} tries to get the correct guess, Thank you for playing my game!".format(tries))
