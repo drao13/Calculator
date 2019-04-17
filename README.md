@@ -1,5 +1,4 @@
 # Calculator
-Simple Calculator Functions 
 from tkinter import *
 import math
 
